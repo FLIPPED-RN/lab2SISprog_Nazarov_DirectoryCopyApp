@@ -1,0 +1,25 @@
+﻿<Window x:Class="lab2SISprog_Nazarov_DirectoryCopyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2SISprog_Nazarov_DirectoryCopyApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="400">
+    <StackPanel Margin="10">
+        <Label Content="Исходная директория:"/>
+        <TextBox x:Name="SourceDirectoryTextBox" IsReadOnly="True"/>
+        <Button Content="Выбрать исходную директорию" Click="BrowseSource_Click" Margin="0,5,0,10"/>
+
+        <Label Content="Целевая директория:"/>
+        <TextBox x:Name="TargetDirectoryTextBox" IsReadOnly="True"/>
+        <Button Content="Выбрать целевую директорию" Click="BrowseTarget_Click" Margin="0,5,0,10"/>
+
+        <Label Content="Количество потоков:"/>
+        <TextBox x:Name="ThreadCountTextBox" Text="4" Margin="0,5,0,10"/>
+
+        <Button Content="Начать копирование" Click="StartCopy_Click" Margin="0,10,0,10"/>
+
+        <ProgressBar x:Name="CopyProgressBar" Height="20" Margin="0,10,0,0"/>
+    </StackPanel>
+</Window>
